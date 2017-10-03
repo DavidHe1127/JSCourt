@@ -64,5 +64,17 @@ It is used to populate an array.
 // 3nd arg - end index exclusive
 ```
 
+### string-includes
+Used to check if a string contains something.
 
+```js
+'adfs'.includes('a') // true
+'adfs'.includes('ad') // false
+```
 
+### string-repeat
+Used to repeat the string by given times.
+
+```js
+'abc'.repeat(5) // abcabcabcabcabc
+```
