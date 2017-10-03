@@ -214,3 +214,13 @@ function a(param1 = throwError()) {
 a(10); // ok
 a(); // Error: missing parameter
 ```
+
+Destructering also works on arrays.
+
+```js
+const [age, sex] = [18, 'male'];
+
+console.log(age) // 18
+console.log(sex) // 'male'
+```
+
