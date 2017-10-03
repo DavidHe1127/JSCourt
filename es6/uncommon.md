@@ -4,6 +4,9 @@
   * [Array from](#array-from)
   * [Array of](#array-of)
   * [Array fill](#array-fill)
+* String
+  * [String includes](#string-includes)
+  * [String repeat](#string-repeat)
 
 ### array-from
 It converts any data structures that implement `Iterator` interface to array.
