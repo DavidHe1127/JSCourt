@@ -185,3 +185,32 @@ var c = {
 
 b(c);
 ```
+
+If parameters are omitted, errors thrown out.
+
+```js
+function a({protocol, port, delay, retries, timeout, log}) {
+}
+a(); // TypeError: Cannot match against 'undefined' or 'null'
+```
+
+To fix it, we need to assign a default value
+
+```js
+function a({protocol, port, delay, retries, timeout, log} = {}) {
+}
+a(); // no error
+```
+
+So one use case is to check mandatory arguments
+
+```js
+function throwError() {
+  throw new Error('Missing parameter');
+}
+
+function a(param1 = throwError()) {
+}
+a(10); // ok
+a(); // Error: missing parameter
+```
