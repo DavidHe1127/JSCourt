@@ -7,6 +7,8 @@
 * String
   * [String includes](#string-includes)
   * [String repeat](#string-repeat)
+* Object
+  * [Object values](#object-values)
 
 ### array-from
 It converts any data structures that implement `Iterator` interface to array.
@@ -77,4 +79,11 @@ Used to repeat the string by given times.
 
 ```js
 'abc'.repeat(5) // abcabcabcabcabc
+```
+
+### object-values
+Similar to `Object.keys({a: 1, b: 2})`, it returns all values in an array.
+
+```js
+Object.values({a: 1, b: [1, 2]}) // [1, [1, 2]]
 ```
