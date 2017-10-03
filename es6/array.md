@@ -1,6 +1,12 @@
 ## New APIs
 
-* `Array.from` converts any data structures that implement `Iterator` interface to array.
+* Array
+  * [Array from](#array-from)
+  * [Array of](#array-of)
+  * [Array fill](#array-fill)
+
+### array-from
+It converts any data structures that implement `Iterator` interface to array.
 Iterable data structures include:
   * Array
   * String
@@ -29,8 +35,8 @@ Array.isArray(Array.from(s)); // true
 
 Array.from(arguments) // gives you the array
 ```
-
-* `Array.of` is used to create an array in a consistent way (no function overriding). See the example code below:
+### array-of
+It is used to create an array in a consistent way (no function overriding). See the example code below:
 
 ```js
 // old way
@@ -44,7 +50,8 @@ Array.of(3) // [3]
 Array.of() // []
 ```
 
-* `Array.fill` is used to populate an array.
+### array-fill
+It is used to populate an array.
 
 ```js
 ['a', 'b', 'c'].fill(7) // [7, 7, 7]
