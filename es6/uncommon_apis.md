@@ -224,3 +224,14 @@ console.log(age) // 18
 console.log(sex) // 'male'
 ```
 
+Renaming!!!
+
+```js
+var state = {a: 'a', b: 'b'};
+
+const {a: abc, b: efg} = state;
+
+console.log(a); // undefined
+console.log(abc); // a
+```
+
