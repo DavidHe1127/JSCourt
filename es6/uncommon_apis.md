@@ -131,3 +131,16 @@ function a(...param1, ...param2) {
 }
 a(5, 10, 15);    // SyntaxError: parameter after rest parameter
 ```
+Default values in function arguments can be set as below:
+```js
+var getDefault = function () {
+return 4;
+};
+
+function a(a, b = ++a, c = getDefault()) {
+console.log(c); // 4
+console.log(a); // 1
+console.log(b); // 2
+}
+a(1, 2);
+```
