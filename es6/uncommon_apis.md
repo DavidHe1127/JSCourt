@@ -155,27 +155,33 @@ a(1, 2);
 ```
 
 ### destructering
+Start with basics
 
-```
-function a({port}, bundle = { protocol, port}) { console.log(port, bundle.protocol); // 888 http};var options = { protocol: 'http', port: 800}a(options, options);function b({ delay = 150, log = true}) { console.log(delay, log); // 150 false}var c = { log: false};b(c);
-If parameters are omitted, errors thrown out.
+```js
+function a({port}, bundle = {
+  protocol,
+  port
+}) {
+  console.log(port, bundle.protocol); // 888 http
+};
 
-function a({protocol, port, delay, retries, timeout, log}) {
+var options = {
+  protocol: 'http',
+  port: 800
 }
-a(); // TypeError: Cannot match against 'undefined' or 'null'
-To fix it, we need to assign a default value
 
-function a({protocol, port, delay, retries, timeout, log} = {}) {
-}
-a(); // no error
-Use destructuring to check mandatory parameter
+a(options, options);
 
-exit: ⌘ ↩
-function throwError() {
-    throw new Error('Missing parameter');
+function b({
+ delay = 150,
+ log = true
+}) {
+  console.log(delay, log); // 150 false
 }
-function a(param1 = throwError()) {
-}
-a(10); // ok
-a(); // Error: missing parameter
+
+var c = {
+ log: false
+};
+
+b(c);
 ```
