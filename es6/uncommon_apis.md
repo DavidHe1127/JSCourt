@@ -115,3 +115,19 @@ function a(b, ...args) {
 
 a(1,2,3)
 ```
+
+Two things to be aware of:
+
+1. must be last argument
+2. only one rest parameter allowed
+
+```js
+function a(a, ...params, b) {
+  console.log(a, params, b);
+}
+a(5, 10, 15);    // SyntaxError: parameter after rest parameter
+
+function a(...param1, ...param2) {
+}
+a(5, 10, 15);    // SyntaxError: parameter after rest parameter
+```
