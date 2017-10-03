@@ -90,5 +90,28 @@ Object.values({a: 1, b: [1, 2]}) // [1, [1, 2]]
 ```
 
 ### spread-rest-destructering
+Spread `...` basically expands array into individual parameters.
 
+```js
+function a(first, second) {
+  console.log(first, second); // 10 15
+  console.log(arguments[0]); // 10
+  console.log(arguments[1], arguments[2]); // 15 20
+  console.log(arguments[3]); // 25
+}
 
+var params = [10, 15];
+a(...params, 20, ...[25]);    // 10 15 20 25
+```
+
+Now let's see rest. Same syntax as spread operator but collects parameters and turns them into an `array`.
+
+```js
+function a(b, ...args) {
+  console.log(Array.isArray(args)); // true
+  console.log(args); // [2, 3]
+  console.log(b); // 1
+}
+
+a(1,2,3)
+```
