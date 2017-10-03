@@ -10,6 +10,10 @@
 * Object
   * [Object values](#object-values)
 * [Rest/Spread operatos and object destructering](#spread-rest-destructering)
+  * [Spread](#spread)
+  * [Rest](#rest)
+  * [Default values for function arguments](#default-values)
+  * [Destructering](#destructering)
 
 ### array-from
 It converts any data structures that implement `Iterator` interface to array.
@@ -90,7 +94,9 @@ Object.values({a: 1, b: [1, 2]}) // [1, [1, 2]]
 ```
 
 ### spread-rest-destructering
-Spread `...` basically expands array into individual parameters.
+
+### spread
+It basically expands array into individual parameters.
 
 ```js
 function a(first, second) {
@@ -104,7 +110,8 @@ var params = [10, 15];
 a(...params, 20, ...[25]);    // 10 15 20 25
 ```
 
-Now let's see rest. Same syntax as spread operator but collects parameters and turns them into an `array`.
+### rest
+Same syntax as spread operator but collects parameters and turns them into an `array`.
 
 ```js
 function a(b, ...args) {
@@ -131,6 +138,8 @@ function a(...param1, ...param2) {
 }
 a(5, 10, 15);    // SyntaxError: parameter after rest parameter
 ```
+### default-values
+
 Default values in function arguments can be set as below:
 ```js
 var getDefault = function () {
@@ -143,4 +152,30 @@ function a(a, b = ++a, c = getDefault()) {
   console.log(b); // 2
 }
 a(1, 2);
+```
+
+### destructering
+
+```
+function a({port}, bundle = { protocol, port}) { console.log(port, bundle.protocol); // 888 http};var options = { protocol: 'http', port: 800}a(options, options);function b({ delay = 150, log = true}) { console.log(delay, log); // 150 false}var c = { log: false};b(c);
+If parameters are omitted, errors thrown out.
+
+function a({protocol, port, delay, retries, timeout, log}) {
+}
+a(); // TypeError: Cannot match against 'undefined' or 'null'
+To fix it, we need to assign a default value
+
+function a({protocol, port, delay, retries, timeout, log} = {}) {
+}
+a(); // no error
+Use destructuring to check mandatory parameter
+
+exit: ⌘ ↩
+function throwError() {
+    throw new Error('Missing parameter');
+}
+function a(param1 = throwError()) {
+}
+a(10); // ok
+a(); // Error: missing parameter
 ```
