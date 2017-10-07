@@ -62,4 +62,23 @@ Object.defineProperties(obj, {
 console.log(obj); // { price: 10, code: [Getter] } color property not show up since it is not enumerable
 obj.code = 10; // throws an error since no setter defined
 ```
+### string-replacement
+  * `str.replace(regex|substr, newSubStr|function)
+  * Return a new string with some or all matches of a pattern (specified inside parentheses) replaced by a replacement. It allows for    multiple patterns separated by parentheses
+  * Does not change the original string instead, it returns a new string
+
+```js
+function replacer(match, p1, p2, p3, offset, string){
+  // p1 is nondigits([^\d]*), p2 digits(\d*), and p3 non-alphanumerics([^\w]*)
+  console.log([p1, p2, p3].join('-')); // abc-12345-#$*%:
+};
+
+var newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+```
+
+
+
+
+
+
 
