@@ -5,9 +5,6 @@
 * String
   * [String replacement](#string-replacement)
   * [String truncation](#string-truncation)
-* Array
-  * [Reverse](#reverse)
-  * [Sort](#sort)
 
 ### create-objs-via-defineproperties
   * `Object.defineProperty` and `Object.defineProperties` can take `value` or `get/set func` but not both.
@@ -75,6 +72,28 @@ function replacer(match, p1, p2, p3, offset, string){
 
 var newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 ```
+
+### string-truncation
+  * Both `substring` and `substr` take `startIndex` as `1st arg`. And they both extract chars from `startIndex` till string end if `2nd arg` is omitted. 
+  The difference is:
+  * `substring` takes `endIndex`. When it is specified, it will truncate given string up to **BUT NOT** including the `endIndex` char
+  * `substr` takes character count
+
+```js
+let word = 'david';
+
+word.substring(1); // 'avid'
+word.substring(1, 1); // ''
+word.substring(1, 2); // 'a'
+// if either argument is less than 0 or is NaN, it is treated as if it were 0
+word.substring(-3); // 'david'
+
+word.substr(1); // 'avid'
+word.substr(1, 1); // 'a'
+word.substr(1, 2); // 'av'
+word.substr(-3); // 'vid'
+```
+  
 
 
 
