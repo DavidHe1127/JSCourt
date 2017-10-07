@@ -1,4 +1,4 @@
-## Uncommon APIs
+## New Features
 
 * Array
   * [Array from](#array-from)
