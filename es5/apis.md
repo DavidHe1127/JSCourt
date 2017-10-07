@@ -1,7 +1,7 @@
 ## New Features
 
 * Object
-  * [Create objects via defineProperties](#create-objs-via-defintproperties)
+  * [Create objects via defineProperties](#create-objs-via-defineproperties)
 * String
   * [String replacement](#string-replacement)
   * [String truncation](#string-truncation)
