@@ -3,8 +3,8 @@
 ### Replacer
 ```js
 var user = {
-  name: 'andy',
-  isAdult: false,
+  name: 'andy',
+  isAdult: false,
   age: 11,
   addr: 'sydney'
 };
@@ -83,3 +83,4 @@ var user = {
 
 JSON.parse(JSON.stringify(user)) // DO NOT DO IT ON LARGE JSON OBJECT - PERFORMANCE PROBLEM
 ```
+Note, `JSON.parse` takes two arguments - 1st is the string to parse, 2nd is replacer same as `JSON.stringify`
