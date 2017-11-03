@@ -62,5 +62,3 @@ for(var i = 0, max = Array.length; i < max; i++)
 * Context is always the value of the `this` keyword, which is a reference to the object that owns the currently executing code
 
 * Each `+` operation will trigger memory allocation. Use `var a = [1,2].join('')`
-
-* Bitwise not any number x yields `-(x+1)`. For example, `~5` yields `-6`. A common use case is `if(~arr.indexOf(1))` to check if arr has a specific element
