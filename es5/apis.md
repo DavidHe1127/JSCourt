@@ -5,6 +5,8 @@
 * String
   * [String replacement](#string-replacement)
   * [String truncation](#string-truncation)
+* Number
+  * [Number toLocaleString](#number-tolocalestring)
 
 ### create-objs-via-defineproperties
   * `Object.defineProperty` and `Object.defineProperties` can take `value` or `get/set func` but not both.
@@ -94,7 +96,12 @@ word.substr(1, 2); // 'av'
 word.substr(-3); // 'vid'
 ```
   
-
+### number-tolocalestring
+Currency formatting
+```js
+const number = 5890;
+number.toLocaleString('en', {style: 'currency', currency: 'GBP'} // £5,890.00
+```
 
 
 
