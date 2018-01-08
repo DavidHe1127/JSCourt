@@ -75,6 +75,25 @@ function replacer(match, p1, p2, p3, offset, string){
 var newString = "abc12345#$*%".replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
 ```
 
+```js
+function normalize (type) {
+  var rr = type.replace(/(\s+)(&?)/g, (match, p1, p2) => {
+    if (p1) {
+      p1 = '_';
+    }
+
+    if (p2) {
+      p2 = '-';
+    }
+    return p1 + p2;
+  });
+}
+
+normalize('Heavy Rain & Showers'); // Heavy_Rain_-_Showers
+```
+
+
+
 ### string-truncation
   * Both `substring` and `substr` take `startIndex` as `1st arg`. And they both extract chars from `startIndex` till string end if `2nd arg` is omitted. 
   The difference is:
