@@ -97,7 +97,7 @@ A few things to keep in mind
 
 ### Number
 
-`isNaN()` and `Number()` both convert `falsy values excluding undefined` such as `'', ' ', null, '0', false` into zero. As a result, `isNaN(' ')` or `isNaN('')` returns false. Use `parseInt` will fix this problem as `parseInt` will fail to convert empty string into number.
+`isNaN()` and `Number()` both convert `falsy values excluding undefined but including ' '` such as `'', null, '0', false` into zero. As a result, `isNaN(' ')` or `isNaN('')` returns false. Use `parseInt` will fix this problem as `parseInt` will fail to convert empty string into number.
 
 ```js
 isNaN(null) // false
