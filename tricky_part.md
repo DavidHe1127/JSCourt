@@ -26,7 +26,7 @@ r instanceof Range // return true if r inherits from Range.prototype
 
 ```js
 var arr = ['defabc', 'abc'];
-var reg = /abc/g // will only match 'defabc' but not 'abc' since the last index after first match is 4
+var reg = /abc/g // will only match 'defabc' but not 'abc' since the last index after first match is 6 - the next index search needs to                    // start at
 
 arr.forEach(ele => reg.test(ele)); // solution is set reg.lastIndex = 0 after each match
 ```
