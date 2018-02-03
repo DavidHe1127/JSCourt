@@ -22,7 +22,7 @@ r instanceof Range // return true if r inherits from Range.prototype
 ```
 
 ### Regex
-Use `g` will make Regex stateful - it remembers the last index of match and will continue the search starting at that index.
+* Use `g` will make Regex stateful - it remembers the last index of match and will continue the search starting at that index.
 
 ```js
 var arr = ['defabc', 'abc'];
@@ -31,9 +31,9 @@ var reg = /abc/g // will only match 'defabc' but not 'abc' since the last index 
 arr.forEach(ele => reg.test(ele)); // solution is set reg.lastIndex = 0 after each match
 ```
 
-`new RegExp(regexp|string)` will create a new regex object which has methods like `test` and `exec`.
+* `new RegExp(regexp|string)` will create a new regex object which has methods like `test` and `exec`.
 
-`\\?` represent the question mark in `regex string`.
+* `\\?` represent the question mark in `regex string`.
 
 ### Arrays
 Use `Array.prototype.concat()` will leave the originals untouched. Furthermore, any operations on the new array will have no effect on the original arrays and vice versa.
