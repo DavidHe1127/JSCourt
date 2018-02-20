@@ -5,6 +5,7 @@
 
 * [Online Regex playground](#online-regex-playground)
 * [Online Css to Less](#online-css-2-less)
+* [Enhanced debugging logger](#enhanced-debugging-logger)
 
 ### date-fns
 https://date-fns.org/
@@ -15,5 +16,6 @@ https://regexly.chipto.io/
 ### online-css-2-less
 https://www.css2less.net/
 
-
+### enhanced-debugging-logger
+[console.probe](https://github.com/grantcarthew/node-console-probe)
 
