@@ -1,6 +1,5 @@
 * [Promise and Async/Await](#promise-and-async-await)
-
-
+* [Turn a sync into async](#turn-a-sync-into-async)
 
 ### promise-and-async-await
 ```js
@@ -16,4 +15,13 @@ const getBook = async bookName => {
     rating
   };
 };
+```
+
+### turn-a-sync-into-async
+```js
+function foo() {
+  return Promise.resolve(5);
+}
+
+foo().then(console.log);
 ```
