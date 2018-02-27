@@ -7,6 +7,7 @@
 const getBook = async bookName => {
   const book = await fetchBook(bookName);
   
+  // simultaneously fetch author and rating
   const [author, rating] = await Promise.all([fetchAuthor(book.author_id), fetchRating(book.id)]);
   
   return {
