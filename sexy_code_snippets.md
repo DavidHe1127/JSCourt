@@ -3,4 +3,16 @@
 
 
 ### promise-and-async-await
-
+```js
+const getBook = async bookName => {
+  const book = await fetchBook(bookName);
+  
+  const [author, rating] = await Promise.all([fetchAuthor(book.author_id), fetchRating(book.id)]);
+  
+  return {
+    ...book,
+    author,
+    rating
+  };
+};
+```
