@@ -2,6 +2,7 @@
 * [Turn a sync into async](#turn-a-sync-into-async)
 * React
   * [Create element dynamically](#create-element-dynamically)
+  * [Evaluation in conditional rendering statement](#evaluation-in-conditional-rendering-statement)
 
 ### promise-and-async-await
 ```js
@@ -125,4 +126,26 @@ export default class ActionWithAnalytics extends React.Component {
     return this.ele;
   }
 }
+```
+
+### evaluation-in-conditional-rendering-statement
+Use `React.Fragment` to wrap contents up and put it in the conditional statement.
+
+```js
+...
+const racingPost = hasRacingPost ? <span>Racing Post</span> : <span class="racing_report">Racing Report</span>
+...
+
+...
+<div>
+    {commentsExist && <React.Fragment>
+        {racingPost} // evaluation
+        <span>
+           {comment}
+        </span>
+        <button>
+          Click Me
+        </button>
+    </React.Fragment>}
+</div>
 ```
