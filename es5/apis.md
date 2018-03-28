@@ -62,7 +62,7 @@ console.log(obj); // { price: 10, code: [Getter] } color property not show up si
 obj.code = 10; // throws an error since no setter defined
 ```
 ### string-replacement
-  * `str.replace(regex|substr, newSubStr|function)
+  * `str.replace(regex|substr, newSubStr|function)`
   * Return a new string with some or all matches of a pattern (specified inside parentheses) replaced by a replacement. It allows for    multiple patterns separated by parentheses
   * Does not change the original string instead, it returns a new string
 
