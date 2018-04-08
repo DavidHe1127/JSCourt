@@ -115,7 +115,7 @@ if (bool) console.log(1); // it will print 1 since bool is an object - object wr
 
 ### call-tostring-on-an-object
 Objects have internal value called `[[Class]]` which is a tag that represents object type. `Object.prototype.toString` returns a string
-` `[object ${tag}]` `. Tag can be either built-in tags `Array`, `String` or `Date` or something that is set explicitly.
+`\`[object ${tag}]\``. Tag can be either built-in tags `Array`, `String` or `Date` or something that is set explicitly.
 
 
 
