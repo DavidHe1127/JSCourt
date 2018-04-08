@@ -7,6 +7,7 @@
 * [Arguments pass by value](#arguments-pass-by-value)
 * [This keyword in Arrow function](#this-keyword-in-array-function)
 * [isNaN vs Number](#isnan-vs-number)
+* [Type-casting n coercion](#type-casting-n-coercion)
 
 ### Prototype
 Every JS func (except Fucntion.bind) has a prototype property - an empty object by default. You attach properties and methods on this prototype property in order to implement inheritance.
@@ -82,10 +83,34 @@ A few things to keep in mind
   * Cannot use `apply, call, bind` to change its context - it will be the same value as when they are defined.
 
 ### isNaN-vs-Number
-
 `isNaN()` and `Number()` both convert `falsy values excluding undefined but including ' '` such as `'', null, '0', false` into zero. As a result, `isNaN(' ')` or `isNaN('')` returns false. Use `parseInt` will fix this problem as `parseInt` will fail to convert empty string into number.
 
 ```js
 isNaN(null) // false
 isNaN(parseInt('')) // true
 ```
+
+### type-casting-n-coercion
+
+* Explicit type conversion is called `type-casting`. Type conversion happens in the background is called `coercion`.
+```js
+Number('12'); // 12 type-casting
+1 + '1'; // '11' coercion
+```
+* All primitives except `null` and `undefined` have object wrappers around their native values.
+```js
+// use their constructors to cast type
+String(123); // '123'
+Boolean(123); // true
+Number('123'); // 123
+Number(true); // 1
+Number(false); // 0
+```
+But watch out for this case:
+```js
+const bool = new Boolean(false);
+if (bool) console.log(1); // it will print 1 since bool is an object - object wrapper is created around its native value
+```
+
+
+
