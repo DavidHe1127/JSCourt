@@ -14,7 +14,7 @@
   * [Rest](#rest)
   * [Default values for function arguments](#default-values)
   * [Destructering](#destructering)
-* [Miscellaneous]
+* [Miscellaneous](#miscellaneous)
   * [Exponent operation](#exponent-operation)
 
 ### array-from
@@ -236,6 +236,8 @@ const {a: abc, b: efg} = state;
 console.log(a); // undefined
 console.log(abc); // a
 ```
+
+## miscellaneous
 
 ### exponent-operation
 
