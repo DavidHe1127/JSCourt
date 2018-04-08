@@ -8,6 +8,7 @@
 * [This keyword in Arrow function](#this-keyword-in-array-function)
 * [isNaN vs Number](#isnan-vs-number)
 * [Type-casting n coercion](#type-casting-n-coercion)
+* [Call toString on an object](#call-tostring-on-an-object)
 
 ### Prototype
 Every JS func (except Fucntion.bind) has a prototype property - an empty object by default. You attach properties and methods on this prototype property in order to implement inheritance.
@@ -111,6 +112,10 @@ But watch out for this case:
 const bool = new Boolean(false);
 if (bool) console.log(1); // it will print 1 since bool is an object - object wrapper is created around its native value
 ```
+
+### call-tostring-on-an-object
+Objects have internal value called `[[Class]]` which is a tag that represents object type. `Object.prototype.toString` returns a string
+``[object ${tag}]``. Tag can be either built-in tags `Array`, `String` or `Date` or something that is set explicitly.
 
 
 
