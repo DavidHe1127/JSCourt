@@ -1,6 +1,14 @@
 ### Tricky Parts
 
-#### Prototype
+* [Prototype](#prototype)
+* [Constructor](#constructor)
+* [Regex](#regex)
+* [Primitive-vs-reference](#primitive-vs-reference)
+* [Arguments pass by value](#arguments-pass-by-value)
+* [This keyword in Arrow function](#this-keyword-in-array-function)
+* [isNaN vs Number](#isNaN-vs-Number)
+
+### Prototype
 Every JS func (except Fucntion.bind) has a prototype property - an empty object by default. You attach properties and methods on this prototype property in order to implement inheritance.
 
 If an object is created with an object literal `var newObj = {}`, it inherits properties from `Object.prototype` and we say its prototype object (or prototype attribute) is Object.prototype. If an object is created from a constructor function such as `new Object (), new Fruit () or new Array () or new Anything ()`, it inherits from that constructor `Object (), Fruit (), Array (), or Anything ()`. For example, with a function such as Fruit (), each time we create a new instance of Fruit `var aFruit = new Fruit ()`, the new instance’s prototype is set to the prototype from the Fruit constructor, which is `Fruit.prototype`.
@@ -37,30 +45,7 @@ arr.forEach(ele => reg.test(ele)); // solution is set reg.lastIndex = 0 after ea
 
 * `\\?` represent the question mark in `regex string`.
 
-### Arrays
-Use `Array.prototype.concat()` will leave the originals untouched. Furthermore, any operations on the new array will have no effect on the original arrays and vice versa.
-
-ES5 way
-```js
-var arr1 = [1, 2];
-var arr2 = arr1.concat();
-
-arr2.push(5);
-
-// arr2 [1, 2, 5] arr1 = [1, 2]
-```
-
-ES6 way
-```
-var arr1 = [1, 2];
-var arr2 = [...arr1];
-
-arr2.push(5);
-
-// arr2 [1, 2, 5] arr1 [1, 2]
-```
-
-### Primitive/reference type
+### primitive-vs-reference
 Primitive types are compared by value while Reference type are compared by both reference and value.
 
 ```js
@@ -68,7 +53,7 @@ Primitive types are compared by value while Reference type are compared by both 
 [1] === [1] // false
 ```
 
-### Arguments are pass-by-value
+### arguments-pass-by-value
 In Javascript, we can only access or modify reference-typed value by reference.
   * Primitive values are stored in stack. When variables holding the values are passed into the function, copy of values are passed. Thus, any modifications to arguments' values will not affect variables sitting outside of the function.
   * Reference values are stored in heap. The reference itself, think of it as the pointer, is stored in stack. Same as primitive values, copy of value is passed. Since value is the pointer, changes made on argument will also reflect on outside variables.
@@ -90,14 +75,13 @@ function calc(r) {
 calc(o); // {a:10, b:4, c:[]}
 ```
 
-### This keyword in Arrow function
+### this-keyword-in-array-function
 A few things to keep in mind
   * No `arguments` object
   * No own `this` - always look upward to find `this` context. This differs from traditional functions that have `dynamic this` - its value is determined by how they are called. Arrow functions have `lexical this` - its value is determined by the surrounding scope.
   * Cannot use `apply, call, bind` to change its context - it will be the same value as when they are defined.
 
-
-### Number
+### isNaN-vs-Number
 
 `isNaN()` and `Number()` both convert `falsy values excluding undefined but including ' '` such as `'', null, '0', false` into zero. As a result, `isNaN(' ')` or `isNaN('')` returns false. Use `parseInt` will fix this problem as `parseInt` will fail to convert empty string into number.
 
