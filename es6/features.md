@@ -7,6 +7,7 @@
 * String
   * [String includes](#string-includes)
   * [String repeat](#string-repeat)
+  * [Padding](#padding)
 * Object
   * [Object values](#object-values)
   * [Object entries](#object-entries)  
@@ -87,6 +88,19 @@ Used to repeat the string by given times.
 
 ```js
 'abc'.repeat(5) // abcabcabcabcabc
+```
+
+### padding
+
+```js
+const a = 15;
+const b = 123;
+
+a.toString().padStart(5, '0'); // 00015
+b.toString().padStart(5, '0'); // 00123
+
+a.toString().padEnd(5, '0'); // 15000
+b.toString().padEnd(5, '0'); // 12300
 ```
 
 ### object-values
