@@ -9,6 +9,7 @@
   * [String repeat](#string-repeat)
 * Object
   * [Object values](#object-values)
+  * [Object entries](#object-entries)  
 * [Rest/Spread operatos and object destructering](#spread-rest-destructering)
   * [Spread](#spread)
   * [Rest](#rest)
@@ -93,6 +94,16 @@ Similar to `Object.keys({a: 1, b: 2})`, it returns all values in an array.
 
 ```js
 Object.values({a: 1, b: [1, 2]}) // [1, [1, 2]]
+```
+
+### object-entries
+It returns both keys and values.
+```js
+const cars = {bmw: 1, tesla: 3, honda: 5};
+
+for (let [key, value] of Object.entries(cars)) {
+  console.log(`key: ${key} value: ${value}`);
+}
 ```
 
 ### spread-rest-destructering
