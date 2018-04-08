@@ -6,7 +6,7 @@
 * [Primitive-vs-reference](#primitive-vs-reference)
 * [Arguments pass by value](#arguments-pass-by-value)
 * [This keyword in Arrow function](#this-keyword-in-array-function)
-* [isNaN vs Number](#isNaN-vs-Number)
+* [isNaN vs Number](#isnan-vs-number)
 
 ### Prototype
 Every JS func (except Fucntion.bind) has a prototype property - an empty object by default. You attach properties and methods on this prototype property in order to implement inheritance.
