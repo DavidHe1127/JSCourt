@@ -14,6 +14,8 @@
   * [Rest](#rest)
   * [Default values for function arguments](#default-values)
   * [Destructering](#destructering)
+* [Miscellaneous]
+  * [Exponent operation](#exponent-operation)
 
 ### array-from
 It converts any data structures that implement `Iterator` interface to array.
@@ -233,5 +235,12 @@ const {a: abc, b: efg} = state;
 
 console.log(a); // undefined
 console.log(abc); // a
+```
+
+### exponent-operation
+
+```js
+Math.pow(7, 3) // 343
+7***3 // 343
 ```
 
