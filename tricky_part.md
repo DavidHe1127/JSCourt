@@ -93,25 +93,40 @@ isNaN(parseInt('')) // true
 
 ### type-casting-n-coercion
 
-* Explicit type conversion is called `type-casting`. Type conversion happens in the background is called `coercion`.
-```js
-Number('12'); // 12 type-casting
-1 + '1'; // '11' coercion
-```
-* All primitives except `null` and `undefined` have object wrappers around their native values.
-```js
-// use their constructors to cast type
-String(123); // '123'
-Boolean(123); // true
-Number('123'); // 123
-Number(true); // 1
-Number(false); // 0
-```
-But watch out for this case:
-```js
-const bool = new Boolean(false);
-if (bool) console.log(1); // it will print 1 since bool is an object - object wrapper is created around its native value
-```
+#### type-casting
+   * Explicit type conversion is called `type-casting`. Type conversion happens in the background is called `coercion`.
+   ```js
+   Number('12'); // 12 type-casting
+   1 + '1'; // '11' coercion
+   ```
+   * All primitives except `null` and `undefined` have object wrappers around their native values.
+   ```js
+   // use their constructors to cast type
+   String(123); // '123'
+   Boolean(123); // true
+   Number('123'); // 123
+   Number(true); // 1
+   Number(false); // 0
+   ```
+   But watch out for this case:
+   ```js
+   const bool = new Boolean(false);
+   if (bool) console.log(1); // it will print 1 since bool is an object - object wrapper is created around its native value
+   ```
+#### coercion
+   * `+` results in a string
+   ```js
+   '2' + 2 // 22
+   15 + '' // '15'
+   ```
+   * Other mathematical operators such as `-`, `/` and `*` always cast to numbers
+   ```js
+   new Date('04-02-2018') - '1' // 1522619999999
+   '12' / '6' // 2
+   12 -'1' / 11
+   ```
+
+
 
 ### call-tostring-on-an-object
 Objects have internal value called `[[Class]]` which is a tag that represents object type. `Object.prototype.toString` returns a string
@@ -121,6 +136,7 @@ const dogName = 'Fluffy';
 
 dogName.toString(); // 'Fluffy' (String.prototype.toString called here)
 Object.prototype.toString.call(dogName); // '[object String]'
+Object.prototype.toString.call([12]); // '[object Array]'
 ```
 Set tag by ES6 `Symbol`
 ```js
@@ -136,6 +152,5 @@ Call `toString` on array
 ```js
 const arr = [{}, 1, 2];
 arr.toString() // '[object Object],2,3'
-
 ```
 
