@@ -3,3 +3,13 @@
 ```js
 var valid = '$12.77'.match(/[-+]?(?:\d*\.?\d+|\d+\.?\d*)(?:[eE][-+]?\d+)?/); // [ '12.77', index: 1, input: '$12.77' ]
 ```
+* Use Unary Operator to convert something to a number
+```js
++3     // 3
++'3'   // 3
++true  // 1
++false // 0
++null  // 0
++function(val){  return val } // NaN
+```
+
