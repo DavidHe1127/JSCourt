@@ -1,5 +1,6 @@
 * [Promise and Async/Await](#promise-and-async-await)
 * [Turn a sync into async](#turn-a-sync-into-async)
+* [Precisive rounding](#precisive-rounding)
 * React
   * [Create element dynamically](#create-element-dynamically)
   * [Evaluation in conditional rendering statement](#evaluation-in-conditional-rendering-statement)
@@ -27,6 +28,20 @@ function foo() {
 }
 
 foo().then(console.log);
+```
+
+### precisive-rounding
+```js
+function round(number, precision) {
+  var shift = function (number, precision, reverseShift) {
+    if (reverseShift) {
+      precision = -precision;
+    }
+    var numArray = ("" + number).split("e");
+    return +(numArray[0] + "e" + (numArray[1] ? (+numArray[1] + precision) : precision));
+  };
+  return shift(Math.round(shift(number, precision, false)), precision, true);
+}
 ```
 
 ### create-element-dynamically
