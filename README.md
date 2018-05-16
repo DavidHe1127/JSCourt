@@ -10,6 +10,7 @@ Hope you can find out fun here!
 * [Function](./function.md)
 * [JSON](./json_api.md)
 * [Miscellaneous](./miscellaneous.md)
+  * [Spread, Rest n Destructuring](./spread_rest_destructuring.md)
 
 ## Others
 * [Best Practice](./best_practice.md)
