@@ -67,7 +67,7 @@ console.log(/\u{21}/.test('uuuuuuuuuuuuuuuuuuuuu')); // true
 ```
 
 ### sticky-mode
-When flag `y` enabled, it tells regex to look for a match at `lastIndex` and *ONLY* at `lastIndex` (not before or after in the string).
+When flag `y` enabled, it tells regex to look for a match at `lastIndex` and *ONLY* at `lastIndex` (not before or after) in the string.
 
 ```js
 var str = 'whoofooloo';
