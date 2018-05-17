@@ -3,7 +3,9 @@
 * [Match all numbers including integers and floats](#match-all-integers-floats)
 * [Segment matching vs word boundary](#segment-matching-n-word-boundary)
 * [Matches any character including white-space and new line](#match-any-char-including-whitespace-newline)
-* [Capture group](#capture-group)
+* [Named capture group](#named-capture-group)
+* [Unicode character match](#unicode-char-match)
+* [Sticky mode](#sticky-mode)
 
 ### match-all-integers-floats
 
@@ -41,7 +43,7 @@ world
 /hello.world/us.test(x); // beautiful! . now matches all characters
 ```
 
-### capture-group
+### named-capture-group
 
 ```js
 const pattern = /(?<year>\d{4})-(?<month>\d{2})-(?<day>\d{2})/u;
@@ -51,3 +53,28 @@ console.log(x.groups.year); // '2018'
 console.log(x.groups.month); // '05'
 console.log(x.groups.day); // '18'
 ```
+
+### unicode-char-match
+Flag `u` enables *ES2015 Unicode code point escape* `\u{...}` in the pattern.
+
+```js
+console.log(/\u{1D306}/u.test('𝌆')); // true
+console.log(/\u{21}/u.test('!')); // true
+
+// without u flag
+console.log(/\u{21}/.test('!')); // false
+console.log(/\u{21}/.test('uuuuuuuuuuuuuuuuuuuuu')); // true
+```
+
+### sticky-mode
+When flag `y` enabled, it tells regex to look for a match at `lastIndex` and *ONLY* at `lastIndex` (not before or after in the string).
+
+```js
+var str = 'whoofooloo';
+var regex = /foo/y;
+
+console.log(regex.test(str)); // false
+regex.lastIndex = 4;
+console.log(regex.test(str)); // true
+```
+
