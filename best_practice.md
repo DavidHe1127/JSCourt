@@ -18,6 +18,7 @@ const b = 2;
 const c = 3;
 ```
 * Type casting
+
 ```js
 var reviewScore = 9;
 
@@ -27,15 +28,20 @@ const totalScore = this.reviewScore + ''; // invokes this.reviewScore.valueOf()
 const totalScore = this.reviewScore.toString(); // isn't guaranteed to return a string
 // good
 const totalScore = String(this.reviewScore);
+```
 
+* Utilising `!!` for type casting to return boolean value
+
+```js
 const age = 0;
 // bad
 const hasAge = new Boolean(age);
 // good
 const hasAge = Boolean(age);
 // best
-const hasAge = !!age;
+const hasAge = !!age; // false
 ```
+
 * When enumerating an object you need to filter the prototype methods
 
 ```js
