@@ -51,6 +51,7 @@ console.log(xyz); // {a: 2, b:3, c: 4}
 
 #### Object
 ```js
+// example 1
 const x = {a: 1, b: 2};
 
 const {a: y, b: z} = x;
@@ -63,6 +64,13 @@ const {a, b} = x;
 
 console.log(a); // 1
 console.log(b); // 2
+
+// example 2
+const s = {a: {b: {c: 1}}};
+
+const {a: {b: {c}}} = s;
+
+console.log(c); // 1
 ```
 
 #### Function argument
