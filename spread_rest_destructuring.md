@@ -1,7 +1,5 @@
 ## Spread, Rest and Destructuring
 
-## Spread and Rest
-
 #### Array
 
 ```js
