@@ -9,6 +9,7 @@ Hope you can find out fun here!
 * [Regex](./regex.md)
 * [Function](./function.md)
 * [JSON](./json_api.md)
+* [Async](./async.md)
 * [Miscellaneous](./miscellaneous.md)
   * [Spread, Rest n Destructuring](./spread_rest_destructuring.md)
 
