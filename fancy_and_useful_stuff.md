@@ -6,6 +6,7 @@
 * [Online Regex playground](#online-regex-playground)
 * [Online Css to Less](#online-css-2-less)
 * [Enhanced debugging logger](#enhanced-debugging-logger)
+* [Progressive highlight on page](#progressive-highlight-on-page)
 
 ### date-fns
 https://date-fns.org/
@@ -22,3 +23,6 @@ https://www.css2less.net/
 
 ### fn-arg-validation
 [OW](https://github.com/sindresorhus/ow)
+
+### progressive-highlight-on-page
+[LuminJS](https://github.com/pshihn/lumin)
