@@ -3,6 +3,7 @@
 * [Array.from](#array-from)
 * [Array.of](#array-of)
 * [[].fill](#array-fill)
+* [indexOf with tilde](#indexof-tilde)
 
 ### array-from
 It converts any data structures that implement `Iterator` interface to array.
@@ -56,3 +57,12 @@ Array.of() // []
 // 2nd arg - start index
 // 3nd arg - end index exclusive
 ```
+
+### indexof-tilde
+`~-1` is 0. `~x` is equal to `-(x+1)`.
+```js
+if (~[1, 2].indexOf(1)) {
+  // if array has element 1 dosomething 
+}
+```
+
