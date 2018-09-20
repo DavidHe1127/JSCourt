@@ -5,7 +5,7 @@
 * [Regex](#regex)
 * [Primitive-vs-reference](#primitive-vs-reference)
 * [Arguments pass by value](#arguments-pass-by-value)
-* [This keyword in Arrow function](#this-keyword-in-array-function)
+* [This keyword in Arrow function](#this-keyword-in-arrow-function)
 * [isNaN vs Number](#isnan-vs-number)
 * [Type-casting n coercion](#type-casting-n-coercion)
 * [Call toString on an object](#call-tostring-on-an-object)
@@ -77,7 +77,7 @@ function calc(r) {
 calc(o); // {a:10, b:4, c:[]}
 ```
 
-### this-keyword-in-array-function
+### this-keyword-in-arrow-function
 A few things to keep in mind
   * No `arguments` object
   * No own `this` - always look upward to find `this` context. This differs from traditional functions that have `dynamic this` - its value is determined by how they are called. Arrow functions have `lexical this` - its value is determined by the surrounding scope.
@@ -125,8 +125,6 @@ isNaN(parseInt('')) // true
    '12' / '6' // 2
    12 -'1' / 11
    ```
-
-
 
 ### call-tostring-on-an-object
 Objects have internal value called `[[Class]]` which is a tag that represents object type. `Object.prototype.toString` returns a string
