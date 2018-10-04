@@ -9,6 +9,7 @@
 * [isNaN vs Number](#isnan-vs-number)
 * [Type-casting n coercion](#type-casting-n-coercion)
 * [Call toString on an object](#call-tostring-on-an-object)
+* [Trim spaces inside string](#trim-spaces-inside-string)
 
 ### Prototype
 Every JS func (except Fucntion.bind) has a prototype property - an empty object by default. You attach properties and methods on this prototype property in order to implement inheritance.
@@ -151,4 +152,18 @@ Call `toString` on array
 const arr = [{}, 1, 2];
 arr.toString() // '[object Object],2,3'
 ```
+
+### trim-spaces-inside-string
+`trim` and its siblings `trimStart, trimEnd` ONLY trims whitespaces from the beginning/end of a string. It DOES NOT remove whitespaces in between string. To remove whitespaces in between, use `'Hello World'.replace(/\s/g, '')`
+
+```js
+let a = ' Hello World ';
+
+a.trim(); // 'Hello World'
+a.trimStart(); // 'Hello World '
+a.replace(/\s/g, ''); // 'HelloWorld'
+```
+
+
+
 
