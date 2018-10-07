@@ -17,4 +17,5 @@ Hope you can find out fun here!
 * [Best Practice](./best_practice.md)
 * [Libs, Modules, Framework, playpen](./fancy_and_useful_stuff.md)
 * [Tricky Parts](./tricky_bits.md)
+* [Babel](./babel.md)
 
