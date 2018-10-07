@@ -18,5 +18,5 @@ Hope you can find out fun here!
 * [Libs, Modules, Framework, playpen](./fancy_and_useful_stuff.md)
 * [Tricky Parts](./tricky_bits.md)
 * [Babel](./babel.md)
-* [Snippet](./snippet.md)
+* [Snippets](./snippets.md)
 
