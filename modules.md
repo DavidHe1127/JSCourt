@@ -4,7 +4,7 @@ List below shows well-known `module formats`:
 
 * [AMD](#amd)
 * [ES Modules](#es-module)
-* [commonJS](#cjs)
+* [CommonJS](#cjs)
 * [UMD](#umd)
 
 ### amd
@@ -106,3 +106,19 @@ mymodule.myFunction();
 
 SystemJS implements `UMD`.
 
+```js
+<script src="system.js"></script>
+<script>
+  // set our baseURL reference path
+  System.config({
+    baseURL: '/app',
+  // or 'traceur' or 'typescript'
+    transpiler: 'babel',
+  // or traceurOptions or typescriptOptions
+    babelOptions: {}
+  });
+
+  // loads /app/main.js
+  System.import('main.js');
+</script>
+```
