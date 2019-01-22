@@ -75,7 +75,7 @@ At the time of this writing, dynamic loading of modules is not supported.
 
 
 ### cjs
-`CommonJS` allows dependencies to be exported and imported via directives `module.exports/exports & require`. NodeJS implements `CommonJS` for dependency management.
+`CommonJS` allows dependencies to be exported and imported via directives `module.exports/exports & require`. NodeJS implements `CommonJS` for dependency management. It is good for loading local files but inefficient for files loading in browser. Use `AMD` in browser envrionment.
 
 ### umd
 Stands for `Universal Module Definition`. It's both `AMD` and `CommonJS` compatible, as well as supporting `global` variable definition.
