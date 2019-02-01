@@ -1,6 +1,6 @@
 ## Module formats
 
-Module formats indicate the way you bundle your code for consuming app. i.e bundle your code in CommonJS for NodeJS environment with your consuming app.
+Module formats indicate the way you bundle your code for consuming app. i.e bundle your code in CommonJS for consuming app with NodeJS environment.
 
 List below shows well-known `module formats`:
 
