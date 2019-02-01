@@ -1,5 +1,7 @@
 ## Module formats
 
+Module formats indicate the way you bundle your code for consuming app. i.e bundle your code in CommonJS for NodeJS environment with your consuming app.
+
 List below shows well-known `module formats`:
 
 * [AMD](#amd)
