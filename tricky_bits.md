@@ -10,6 +10,7 @@
 * [Type-casting n coercion](#type-casting-n-coercion)
 * [Call toString on an object](#call-tostring-on-an-object)
 * [Trim spaces inside string](#trim-spaces-inside-string)
+* [Array.prototype.sort secret](#array-sort-secret)
 
 ### Prototype
 Every JS func (except Fucntion.bind) has a prototype property - an empty object by default. You attach properties and methods on this prototype property in order to implement inheritance.
@@ -163,6 +164,23 @@ a.trim(); // 'Hello World'
 a.trimStart(); // 'Hello World '
 a.replace(/\s/g, ''); // 'HelloWorld'
 ```
+
+### array-sort-secret
+`Array.prototype.sort` does not create a copy of original array and sort the copy. Instead, it sorts the original one.
+
+```js
+const arr = [{
+ value: 12
+}, {
+ value: 10
+}];
+
+const res = arr.sort((a, b) => a.value > b.value ? 1 : -1);
+
+res === arr // true!!!
+```
+
+
 
 
 
