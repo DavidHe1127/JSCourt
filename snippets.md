@@ -1,5 +1,5 @@
 * [Async/Await](#async-await)
-
+* [Craft your own promisify](#craft-promisify)
 
 #### async-await
 ```js
@@ -20,4 +20,20 @@ async function example() {
     console.log(item); // logs a response
   }
 }
+```
+
+### craft-promisify
+```js
+const promisify = foo =>
+    new Promise((resolve, reject) => {
+        foo((error, result) => {
+            if (error) {
+                reject(error);
+            } else {
+                resolve(result);
+            }
+        });
+    });
+
+export default promisify;
 ```
