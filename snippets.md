@@ -36,4 +36,7 @@ const promisify = foo =>
     });
 
 export default promisify;
+
+// usage
+promisify(callback => asyncOperation({}, callback)).then(); 
 ```
