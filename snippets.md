@@ -1,7 +1,9 @@
 * [Async/Await](#async-await)
+  * [Error handling](#error-handling)
+  * [operation in parallel](#async in parallel)
 * [Craft your own promisify](#craft-promisify)
 
-#### async-await
+### async-await
 ```js
 async function example() {
   const arrayOfFetchPromises = [
@@ -20,6 +22,30 @@ async function example() {
     console.log(item); // logs a response
   }
 }
+```
+#### error handling:
+```js
+// do this
+const data = await doSomething()
+    .catch(e => console.error('Error when doingSomething', e.message));
+if (!data) { /* Bail out somehow */ }
+
+// not this
+try {
+  ...
+} catch(err) {
+  ...
+}
+```
+
+#### async in parallel
+```js
+await Promise.all([ doSomething(), doSomethingElse()]);
+
+// or even like this
+const a = doSomething();
+const b = doSomethingElse();
+await a, await b;
 ```
 
 ### craft-promisify
