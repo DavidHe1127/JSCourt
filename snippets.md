@@ -1,6 +1,6 @@
 * [Async/Await](#async-await)
   * [Error handling](#error-handling)
-  * [operation in parallel](#async in parallel)
+  * [operation in parallel](#async-in-parallel)
 * [Craft your own promisify](#craft-promisify)
 
 ### async-await
@@ -23,7 +23,7 @@ async function example() {
   }
 }
 ```
-#### error handling:
+#### error-handling:
 ```js
 // do this
 const data = await doSomething()
@@ -38,7 +38,7 @@ try {
 }
 ```
 
-#### async in parallel
+#### async-in-parallel
 ```js
 await Promise.all([ doSomething(), doSomethingElse()]);
 
