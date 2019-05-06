@@ -43,9 +43,11 @@ try {
 await Promise.all([ doSomething(), doSomethingElse()]);
 
 // or even like this
-const a = doSomething();
-const b = doSomethingElse();
-await a, await b;
+const fixturesPromise = fixtureModel.fetchAll()
+const teamPromise = teamModel.fetch(teamId)
+
+const fixtures = await fixturesPromise
+const team = await teamPromise
 ```
 
 ### craft-promisify
