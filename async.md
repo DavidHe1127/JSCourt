@@ -1,7 +1,12 @@
-## Async
+## Async/Await
 
+* [Async/Await Summary](#summary)
 * [Async](#async)
 * [Turn a sync into async](#turn-a-sync-into-async)
+
+### summary
+* async - The return value of an async function is always wrapped in a `Promise.resolve`.
+* await - Resolve the promise - an alternate way to do then().
 
 ### async
 
