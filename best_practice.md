@@ -68,3 +68,11 @@ for(var i = 0, max = Array.length; i < max; i++)
 * Context is always the value of the `this` keyword, which is a reference to the object that owns the currently executing code
 
 * Each `+` operation will trigger memory allocation. Use `var a = [1,2].join('')`
+
+* Use `Object.is` over `===` for comparison between two values. `Object.is('1', '1') // true`.
+![comparison](./Object.is.png)
+
+
+
+
+
