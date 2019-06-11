@@ -69,6 +69,13 @@ const s = {a: {b: {c: 1}}};
 const {a: {b: {c}}} = s;
 
 console.log(c); // 1
+
+// example 3 filtering
+const s = {a: 'a', b: 'b', c: 'c'};
+
+const {a, ...rest} = s;
+
+console.log(rest); // {b: 'b', c: 'c'}
 ```
 
 #### Function argument
