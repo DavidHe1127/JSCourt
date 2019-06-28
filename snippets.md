@@ -2,6 +2,7 @@
   * [Error handling](#error-handling)
   * [operation in parallel](#async-in-parallel)
 * [Craft your own promisify](#craft-promisify)
+* [Create an array of N elements](#create-array-filled-up-with-ele)
 
 ### async-await
 ```js
@@ -67,4 +68,15 @@ export default promisify;
 
 // usage
 promisify(callback => asyncOperation({}, callback)).then(); 
+```
+
+### create-array-filled-up-with-ele
+
+```
+Array.from({length: 20}, (val, key) => {
+  return {
+    a: 12,
+    i: key // 1,2,3,4,5...20
+  }
+})
 ```
