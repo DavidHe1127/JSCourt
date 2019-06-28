@@ -72,7 +72,7 @@ promisify(callback => asyncOperation({}, callback)).then();
 
 ### create-array-filled-up-with-ele
 
-```
+```js
 Array.from({length: 20}, (val, key) => {
   return {
     a: 12,
