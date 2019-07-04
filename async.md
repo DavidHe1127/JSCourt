@@ -50,7 +50,10 @@ async function orderItems() {
 
   items.data.forEach(async i => {
     const res = await sendRequest(items.data[i]); // execution in parallel
-    console.log('ccc') // you will see five times of ccc being printed all at once. The flow is do sendReq 5 time straight                          // once any one of them gets resolved AND nothing in the call stack, runtime will then pick queued                            // console.log('ccc') and execute them.
+    // you will see five times of ccc being printed all at once. The flow is do sendReq 5 time straight
+    // once any one of them gets resolved AND nothing in the call stack, runtime will then pick queued
+    // console.log('ccc') and execute them.
+    console.log('ccc')                                                    
   });
 }
 ```
