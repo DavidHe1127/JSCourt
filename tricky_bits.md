@@ -24,6 +24,9 @@ obj.protoype // undefined why is that?
 There is an internal property called `[[proto]]` which is not accessible to programmers. That property points to object prototype. However, most engines make this property accessible as `__proto__`. When you create an object like
 `var o = {a: false, b: 'something', ...}` then `o.__proto__` is `Object.prototype`.
 
+![js-prototype-chain](./js-prototype-chain.png)
+![js-prototype-chain-2](./js-prototype-chain-2.png)
+
 ### Constructor
 The critical feature of constructor invocation (when use new) is that the prototype property of the constructor is used as the prototype of the new object.
 
