@@ -41,6 +41,7 @@ var res = JSON.stringify(user, (k, v) => {
 ```
 
 ### Remove unwanted properties
+Use `JSON.stringify`
 ```js
 var user = {
   name: 'andy',
@@ -51,7 +52,17 @@ var user = {
 
 var res = JSON.stringify(user, ['name', 'addr']);
 
-// {"name":"andy","addr":"sydney"}
+// '{"name":"andy","addr":"sydney"}'
+```
+Use `JSON.parse`
+```js
+const res = JSON.parse('{"p": 5}', (key, value) =>
+    key === 'p'
+    ? undefined // return value * 2 for numbers
+    : value     // return everything else unchanged
+);
+
+console.log(res); // {}
 ```
 
 ### Format result
