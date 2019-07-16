@@ -53,6 +53,14 @@ var user = {
 var res = JSON.stringify(user, ['name', 'addr']);
 
 // '{"name":"andy","addr":"sydney"}'
+
+// or this to achieve the same result
+JSON.stringify(foo, (key, value) => {
+  if (key === '__typename') {
+    return undefined;
+  }
+  return value;
+});
 ```
 Use `JSON.parse`
 ```js
