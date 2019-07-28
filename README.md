@@ -20,4 +20,5 @@ Hope you can find out fun here!
 * [Tricky Parts](./tricky_bits.md)
 * [Babel](./babel.md)
 * [Snippets](./snippets.md)
-
+* [Some design Patterns](./snippets.md)
+* [Fringed design patterns](./design_patterns.md)
