@@ -14,7 +14,7 @@ Hope you can find out fun here!
 * [Miscellaneous](./miscellaneous.md)
   * [Spread, Rest n Destructuring](./spread_rest_destructuring.md)
 
-## Others
+## Miscellaneous
 * [Best Practice](./best_practice.md)
 * [Libs, Modules, Framework, playpen](./fancy_and_useful_stuff.md)
 * [Tricky Parts](./tricky_bits.md)
