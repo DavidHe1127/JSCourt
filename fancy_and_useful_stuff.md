@@ -2,6 +2,7 @@
 
 * Useful Libs
   * [Simple and Comprehensive Date Lib](#date-fns)
+  * [Async operation result handler](#to)
 
 * [Online Regex playground](#online-regex-playground)
 * [Online Css to Less](#online-css-2-less)
@@ -10,6 +11,9 @@
 
 ### date-fns
 https://date-fns.org/
+
+### to
+https://github.com/scopsy/await-to-js
 
 ### online-regex-playground
 https://regexly.chipto.io/
