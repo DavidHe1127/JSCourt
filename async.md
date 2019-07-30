@@ -6,6 +6,7 @@
 * [Async in sequence/parallel](#Async-in-sequence-parallel)
 
 ### Summary
+* Promise.resolve - Returns a Promise object that is resolved with a given value.
 * async - The return value of an `async` function is always wrapped in a `Promise.resolve`.
 * await - Resolve the promise - an alternate way to do `then()`.
 
