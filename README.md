@@ -11,6 +11,7 @@ Hope you can find out fun here!
 * [JSON](./json_api.md)
 * [Async](./async.md)
 * [Modules](./modules.md)
+* [Arrow Function](./arrow-function.md)
 * [Miscellaneous](./miscellaneous.md)
   * [Spread, Rest n Destructuring](./spread_rest_destructuring.md)
 
