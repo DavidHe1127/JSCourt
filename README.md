@@ -9,7 +9,7 @@ Hope you can find out fun here!
 * [Regex](./regex.md)
 * [Function](./function.md)
 * [JSON](./json_api.md)
-* [Async](./async.md)
+* [Promise & Async](./async_promise.md)
 * [Modules](./modules.md)
 * [Arrow Function](./arrow-function.md)
 * [Miscellaneous](./miscellaneous.md)

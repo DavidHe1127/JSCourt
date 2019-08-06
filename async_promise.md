@@ -1,9 +1,27 @@
 ## Async/Await
 
+* [Promise](#promise)
 * [Async/Await Summary](#Summary)
 * [Async](#async)
 * [Turn a sync into async](#Turn-a-sync-into-async)
 * [Async in sequence/parallel](#Async-in-sequence-parallel)
+
+
+### Promise
+
+![promise](./promise.png)
+
+```js
+loadScript("/article/promise-chaining/one.js")
+  .then(script => loadScript("/article/promise-chaining/two.js"))
+  .then(script => loadScript("/article/promise-chaining/three.js"))
+  .then(script => {
+    // scripts are loaded, we can use functions declared there
+    one();
+    two();
+    three();
+  });
+```
 
 ### Summary
 * Promise.resolve - Returns a Promise object that is resolved with a given value.
@@ -54,7 +72,7 @@ async function orderItems() {
     // you will see five times of ccc being printed all at once. The flow is do sendReq 5 time straight
     // once any one of them gets resolved AND nothing in the call stack, runtime will then pick queued
     // console.log('ccc') and execute them.
-    console.log('ccc')                                                    
+    console.log('ccc')
   });
 }
 ```
