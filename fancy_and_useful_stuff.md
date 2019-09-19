@@ -3,11 +3,11 @@
 * Useful Libs
   * [Simple and Comprehensive Date Lib](#date-fns)
   * [Async operation result handler](#to)
-
 * [Online Regex playground](#online-regex-playground)
 * [Online Css to Less](#online-css-2-less)
 * [Enhanced debugging logger](#enhanced-debugging-logger)
 * [Progressive highlight on page](#progressive-highlight-on-page)
+* [Convenient and dependency free wrapper for working with arrays and objects](#collect-js)
 
 ### date-fns
 https://date-fns.org/
@@ -30,3 +30,6 @@ https://www.css2less.net/
 
 ### progressive-highlight-on-page
 [LuminJS](https://github.com/pshihn/lumin)
+
+### collect-js
+[Collect.js](https://github.com/ecrmnn/collect.js)
