@@ -1,5 +1,6 @@
 ### Tricky Parts
 
+* [Scope and Context](#scope-and-context)
 * [Prototype](#prototype)
 * [Constructor](#constructor)
 * [Regex](#regex)
@@ -11,6 +12,12 @@
 * [Call toString on an object](#call-tostring-on-an-object)
 * [Trim spaces inside string](#trim-spaces-inside-string)
 * [Array.prototype.sort secret](#array-sort-secret)
+
+### Scope and Context
+
+- A lexical scope in Javascript means that a variable defined outside a function can be accessible inside another function defined after the variable declaration. But the opposite is not true.
+- Context(this) in javascript works in a way that's very similar to dynamic scope in programming languages that support it.
+- However, context in arrow function works the same way as lexical scope.
 
 ### Prototype
 Every JS func (except Fucntion.bind) has a prototype property - an empty object by default. You attach properties and methods on this prototype property in order to implement inheritance.
