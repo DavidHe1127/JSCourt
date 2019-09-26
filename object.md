@@ -1,7 +1,7 @@
 ## Object
 
 * [Object.keys|values|entries](#object-keys-values-entries)
-* [Seal an object)(#seal-an-object)
+* [Seal an object](#seal-an-object)
 
 ### object-keys-values-entries
 
