@@ -30,12 +30,6 @@ var obj = {
   foo: 'bar'
 };
 
-// New properties may be added, existing properties
-// may be changed or removed.
-obj.foo = 'baz';
-obj.lumpy = 'woof';
-delete obj.prop;
-
 var o = Object.seal(obj);
 
 o === obj; // true
