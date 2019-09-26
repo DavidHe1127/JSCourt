@@ -190,6 +190,18 @@ const res = arr.sort((a, b) => a.value > b.value ? 1 : -1);
 res === arr // true!!!
 ```
 
+The default sort order is built upon converting the elements into strings, then comparing their sequences of UTF-16 code units values.
+
+```js
+apple 0061 0070 0070 006C 0065
+apbble 0061 0070 0062 0062 006C 0065
+accle 0061 0063 0063 006C 0065 000A
+box 0062 006F 0078
+
+['apple', 'apbble', 'box','accle'].sort()
+// gives you  accle, apbble, apple, box
+```
+
 
 
 
