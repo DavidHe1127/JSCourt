@@ -5,7 +5,7 @@
 * [Async](#async)
 * [Turn a sync into async](#Turn-a-sync-into-async)
 * [Async in sequence/parallel](#Async-in-sequence-parallel)
-
+* [Reference](#reference)
 
 ### Promise
 
@@ -76,4 +76,8 @@ async function orderItems() {
   });
 }
 ```
+
+### Reference
+
+[Promise chaining](https://javascript.info/promise-chaining)
 
