@@ -24,7 +24,14 @@ loadScript("/article/promise-chaining/one.js")
 ```
 
 ### Summary
-* Promise.resolve - Returns a Promise object that is resolved with a given value. Same as `new Promise(function(resolve){ resolve(GIVEN_VALUE); });`
+* Promise.resolve - Returns a Promise object that is resolved with a given value.
+```js
+Promise.resolve(x);
+
+// basically same as 
+
+new Promise(function(r){ r(x); });
+```
 * async - The return value of an `async` function is always wrapped in a `Promise.resolve`.
 * await - Resolve the promise - an alternate way to do `then()`.
 
