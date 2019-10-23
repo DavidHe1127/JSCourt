@@ -2,6 +2,7 @@
 
 * [Object.keys|values|entries](#object-keys-values-entries)
 * [Seal an object](#seal-an-object)
+* [Shallow copy and deep copy an object](#object-shallow-copy-and-deep-copy)
 
 ### object-keys-values-entries
 
@@ -46,3 +47,20 @@ Object.defineProperty(obj, 'foo', {
 }); // throws a TypeError
 ```
 
+### Object deep copy and shallow copy
+Consider approaches below:
+
+```js
+const s1 = {
+  a: 12,
+  b: {
+    val: 'this is good'
+  }
+};
+
+const s2 = Object.assign({}, s1);
+const s3 = {...s1, c: 50};
+```
+Both cases **DO NOT** deeply clone object `s1` meaning changes to `b.val` in `s1` will also be reflected in `s2` and `s3`.  Even if primitive-typed prop `a` does.
+
+To correctly clone object, use `lodash.deepClone`.
