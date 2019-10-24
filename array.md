@@ -40,6 +40,7 @@ It's used to create an array in a consistent way (no function overriding).
 // old way
 Array() // []
 Array(3) // [, , ,] empty slots not undefined
+Array.from({length: 3}, (v, i) => '') // ['', '', '']
 Array(3, 11, 8) // [3, 11, 8]
 
 // new way
