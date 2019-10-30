@@ -5,6 +5,7 @@
 * [Async](#async)
 * [Turn a sync into async](#Turn-a-sync-into-async)
 * [Async in sequence/parallel](#Async-in-sequence-parallel)
+* [Notes](#notes)
 * [Reference](#reference)
 
 ### Promise
@@ -83,6 +84,28 @@ async function orderItems() {
   });
 }
 ```
+
+### Notes
+One should not throw errors in Promise constructor, instead reject the error.
+
+```js
+function getCartItems() {
+  return new Promise((resolve, reject) => {
+    setTimeout(function() {
+      if (false) {
+        resolve({
+          data: [1, 2, 3, 4, 5],
+          id: 1
+        });
+      } else {
+        throw 'err'; // error will not be caught by chaining catch given throw is sync while reject is async
+                     // calling throw will immediately terminate the program while reject lets program to run normally after                      // marking promise status as rejected
+      }
+    }, 0);
+  });
+}
+```
+
 
 ### Reference
 
