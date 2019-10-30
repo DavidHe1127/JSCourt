@@ -104,7 +104,7 @@ function getCartItems() {
   });
 }
 ```
-Error thrown will not be caught by chaining catch given throw is sync while reject is async. Calling throw will immediately terminate the program while reject lets program to run normally after marking promise status as rejected.
+Error thrown will not be caught by chaining catch given throw is **sync** while reject is **async**. Calling throw will immediately terminate the program while reject lets program to run normally after marking promise status as rejected.
 
 ### Reference
 
