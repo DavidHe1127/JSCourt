@@ -98,14 +98,13 @@ function getCartItems() {
           id: 1
         });
       } else {
-        throw 'err'; // error will not be caught by chaining catch given throw is sync while reject is async
-                     // calling throw will immediately terminate the program while reject lets program to run normally after                      // marking promise status as rejected
+        throw 'err'; // NO-NO!!
       }
     }, 0);
   });
 }
 ```
-
+Error thrown will not be caught by chaining catch given throw is sync while reject is async. Calling throw will immediately terminate the program while reject lets program to run normally after marking promise status as rejected.
 
 ### Reference
 
