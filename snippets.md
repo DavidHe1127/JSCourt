@@ -3,6 +3,7 @@
   * [operation in parallel](#async-in-parallel)
 * [Craft your own promisify](#craft-promisify)
 * [Create an array of N elements](#create-array-filled-up-with-ele)
+* [Get last n elements of an array](#last-n-elements-of-array)
 
 ### async-await
 ```js
@@ -79,4 +80,10 @@ Array.from({length: 20}, (val, key) => {
     i: key // 1,2,3,4,5...20
   }
 })
+```
+
+### Last N elements of array
+
+```js
+['a','b','c','d','e'].slice(-2);
 ```
