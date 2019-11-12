@@ -85,5 +85,5 @@ Array.from({length: 20}, (val, key) => {
 ### Last N elements of array
 
 ```js
-['a','b','c','d','e'].slice(-2);
+['a','b','c','d','e'].slice(-2); // ['d','e']
 ```
