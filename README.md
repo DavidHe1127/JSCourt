@@ -1,7 +1,7 @@
 ## Welcome to my JSCourt
 Hope you can find out fun here!
 
-## Core
+## Topics
 * [Array](./array.md)
 * [Object](./object.md)
 * [Number](./number.md)
@@ -12,8 +12,8 @@ Hope you can find out fun here!
 * [Promise & Async](./async_promise.md)
 * [Modules](./modules.md)
 * [Arrow Function](./arrow-function.md)
+* [Spread, Rest n Destructuring](./spread_rest_destructuring.md)
 * [Miscellaneous](./miscellaneous.md)
-  * [Spread, Rest n Destructuring](./spread_rest_destructuring.md)
 
 ## Miscellaneous
 * [Best Practice](./best_practice.md)
