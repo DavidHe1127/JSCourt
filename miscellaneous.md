@@ -1,6 +1,15 @@
 ## Miscellaneous
 
+* [Error handling](#error-handling)
 * [Iterator and Iterable](#iterator-iterable)
+
+### Error handling
+Only two cases below will make errors catchable
+
+- `Promise.reject(new Error('something wrong happened')).catch(err => console.log('err caught'));`
+- `throw new Error('something wrong happened');`
+
+Return a new error object will not trigger catching process.
 
 ### iterator-iterable
 
