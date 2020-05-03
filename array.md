@@ -4,7 +4,7 @@
 * [Array.of](#array-of)
 * [[].fill](#array-fill)
 * [indexOf with tilde](#indexof-tilde)
-* [Truncate from array end](#truncate-from-array-end)
+* [Array truncation](#array-truncation)
 
 ### array-from
 It converts any data structures that implement `Iterator` interface to array.
@@ -68,11 +68,22 @@ if (~[1, 2].indexOf(1)) {
 }
 ```
 
-### Truncate from array end
+### Array Truncation
 
 ```js
+
+// from end
 [1,2,3,4,5].slice(-3); // [2,3,4]
 [1,2,3,4,5].slice(-1); // [5]
+
+// from start
+var array = [11, 12, 13, 14, 15];  
+
+array.length = 3;  
+console.log(array); // [11,12,13]
+
+array.length = 0;  
+console.log(array); // []
 ```
 
 
