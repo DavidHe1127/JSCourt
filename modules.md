@@ -77,7 +77,7 @@ At the time of this writing, dynamic loading of modules is not supported.
 
 With ESM, a file is considered to be a module if it has `import` or `export` or both. A non-module file cannot be `import` or `export` from another file.
 
-Use `export *` to aggregate multiple modules so that the aggregating module can be imported to include all `export(s)` from modules but excluding `default export`.
+Use `export *` to aggregate multiple modules so that the aggregating module can be imported which includes all `export(s)` from modules but excluding `default export`.
 
 ```js
 // foo.js
