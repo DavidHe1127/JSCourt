@@ -4,10 +4,10 @@ Module formats indicate the way you bundle your code for consuming app. i.e bund
 
 List below shows well-known `module formats`:
 
-* [AMD](#amd)
-* [ES Modules](#es-module)
-* [CommonJS](#cjs)
-* [UMD](#umd)
+- [AMD](#amd)
+- [ES Modules](#es-module)
+- [CommonJS](#cjs)
+- [UMD](#umd)
 
 ### amd
 Stands for `Asynchronous module definition`. It's designed to improve web performance by loading modules asynchronously even if one module depends on another.
@@ -74,6 +74,8 @@ require(['lib/template'], function(template) {
 ES6 supports `esm` out of box. Most of big brands - Chrome, FireFox already has this feature built in. Note, `import` and `export` directives are static that means dependencies and exports are determined at the build time not runtime. That enables static analyzer to build a full tree of dependencies without running code.
 
 At the time of this writing, dynamic loading of modules is not supported.
+
+With ESM, a file is considered to be a module if it has `import` or `export` or both. A non-module file cannot be `import` or `export` from another file.
 
 
 ### cjs
