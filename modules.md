@@ -77,6 +77,35 @@ At the time of this writing, dynamic loading of modules is not supported.
 
 With ESM, a file is considered to be a module if it has `import` or `export` or both. A non-module file cannot be `import` or `export` from another file.
 
+Use `export *` to aggregate multiple modules so that the aggregating module can be imported to include all `export(s)` from modules but excluding `default export`.
+
+```js
+// foo.js
+export function add() {}
+export const substract = () => {};
+
+const getName = () => {}
+export default getName;
+
+// bar.js
+export const multiply = () => {};
+export const divide = () => {};
+
+// index.js
+export * from './bar';
+export * from './foo';
+
+// main.js
+import * as all from './index'
+
+console.log(all);
+{
+  multiply: [Getter],
+  divide: [Getter],
+  add: [Getter],
+  substract: [Getter]
+}
+```
 
 ### cjs
 `CommonJS` allows dependencies to be exported and imported via directives `module.exports/exports & require`. NodeJS implements `CommonJS` for dependency management. It is good for loading local files but inefficient for files loading in browser. Use `AMD` in browser envrionment.
