@@ -103,7 +103,7 @@ asyncFunc.then(...).catch((e) => {
   throw e;
 });
 ```
-This will not exit process but cause `unhandled promise rejection` warning. If you would like to kill the process, do this
+This will not exit process but cause `unhandled promise rejection` warning. To kill the process after throwing error, do this
 
 ```js
 process.on('unhandledRejection', err => {
