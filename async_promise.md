@@ -90,6 +90,7 @@ async function orderItems() {
     // you will see five times of ccc being printed all at once. The flow is do sendReq 5 time straight
     // once any one of them gets resolved AND nothing in the call stack, runtime will then pick queued
     // console.log('ccc') and execute them.
+    // all that is because forEach inherently expects callback to be a sync function, it doesn't know how to handle async one 
     console.log('ccc');
   });
 }
