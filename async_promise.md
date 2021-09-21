@@ -128,7 +128,7 @@ async function foo() {
   const result1 = await new Promise((resolve, reject) =>
     setTimeout(() => {
       reject(new Error('inside error')); // better
-      throw new Error('inside error'); // ok
+      throw new Error('inside error'); // NO-NO! throw is sync here!
     }, 500),
   );
 
