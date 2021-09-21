@@ -117,6 +117,8 @@ process.on('unhandledRejection', err => {
 
 ### Error Handling
 
+Simple rule - strictly speaking, async function doesn't throw errors but rather reject the promise with an exception that can be caught by `try/catch` or `catch()`. So use `reject(new Error('new error'))`. NEVER EVER throw error in async function. Do that in sync one.
+
 ```js
 async function foo() {
   if (false) {
