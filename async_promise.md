@@ -122,15 +122,13 @@ Simple rule - strictly speaking, async function doesn't throw errors but rather 
 ```js
 async function foo() {
   if (false) {
-    throw new Error('outside error'); // ok
     Promise.reject(new Error('oustide error')); // not ok causing unhandled rejected promise
-    return Promise.reject(new Error('oustide error')); // better
+    return Promise.reject(new Error('oustide error')); // ok
   }
 
   const result1 = await new Promise((resolve, reject) =>
     setTimeout(() => {
-      reject(new Error('inside error')); // better
-      throw new Error('inside error'); // NO-NO! throw is sync here!
+      reject(new Error('inside error')); // don't need to return it
     }, 500),
   );
 
