@@ -6,6 +6,7 @@
 - [Turn a sync into async](#Turn-a-sync-into-async)
 - [Async in sequence/parallel](#Async-in-sequence-parallel)
 - [Throw in catch](#throw-in-catch)
+- [Error handling](#error-handling)
 - [Notes](#notes)
 - [Reference](#reference)
 
@@ -66,6 +67,7 @@ const getBook = async (bookName) => {
 
 ```js
 function foo() {
+  // same as `return 5;`
   return Promise.resolve(5);
 }
 
@@ -111,6 +113,35 @@ process.on('unhandledRejection', err => {
   console.error((err as Error).message);
   process.exit(1);
 });
+```
+
+### Error Handling
+
+```js
+async function foo() {
+  if (false) {
+    throw new Error('outside error'); // ok
+    Promise.reject(new Error('oustide error')); // not ok causing unhandled rejected promise
+    return Promise.reject(new Error('oustide error')); // better
+  }
+
+  const result1 = await new Promise((resolve, reject) =>
+    setTimeout(() => {
+      reject(new Error('inside error')); // better
+      throw new Error('inside error'); // ok
+    }, 500),
+  );
+
+  console.log(result1); // not execute!
+}
+
+foo()
+  .then((r) => {
+    // console.log(r);
+  })
+  .catch((err) => {
+    console.log('err caught',err);
+  });
 ```
 
 ### Notes
